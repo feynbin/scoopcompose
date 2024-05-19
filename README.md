@@ -29,5 +29,16 @@ Invoke-RestMethod -Uri https://scoop.pages.dev | Invoke-Expression
 搬运了scoop官方推荐的bucket库到国内。每天更新两次。添加使用以下命令。
 
 ```
+scoop bucket add main https://gitlink.org.cn/feynbin/Main
+scoop bucket add extras https://gitlink.org.cn/feynbin/Extras
+scoop bucket add versions https://gitlink.org.cn/feynbin/Versions
+scoop bucket add java https://gitlink.org.cn/feynbin/Java
+scoop bucket add nirsoft https://gitlink.org.cn/feynbin/Nirsoft
+scoop bucket add nonportable https://gitlink.org.cn/feynbin/Nonportable
+scoop bucket add php https://gitlink.org.cn/feynbin/Php
 ```
+
+
+
+
 
