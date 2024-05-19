@@ -439,7 +439,7 @@ function Install-Scoop {
         $scoopUnzipTempDir = "$SCOOP_APP_DIR\_tmp"
         Write-Verbose "Extracting $scoopZipfile to $scoopUnzipTempDir"
         Expand-ZipArchive $scoopZipfile $scoopUnzipTempDir
-        Copy-Item "$scoopUnzipTempDir\scoop-*\*" $SCOOP_APP_DIR -Recurse -Force
+        Copy-Item "$scoopUnzipTempDir\scoop\*" $SCOOP_APP_DIR -Recurse -Force
         $scoopMainUnzipTempDir = "$SCOOP_MAIN_BUCKET_DIR\_tmp"
         Write-Verbose "Extracting $scoopMainZipfile to $scoopMainUnzipTempDir"
         Expand-ZipArchive $scoopMainZipfile $scoopMainUnzipTempDir
@@ -480,7 +480,7 @@ $SCOOP_APP_DIR = "$SCOOP_DIR\apps\scoop\current"
 $SCOOP_MAIN_BUCKET_DIR = "$SCOOP_DIR\buckets\main"
 $SCOOP_CONFIG_HOME = $env:XDG_CONFIG_HOME, "$env:USERPROFILE\.config" | Select-Object -First 1
 $SCOOP_CONFIG_FILE = "$SCOOP_CONFIG_HOME\scoop\config.json"
-$SCOOP_PACKAGE_REPO = 'https://gitlink.org.cn/feynbin/Scoop/releases/download/proxy/master.zip'
+$SCOOP_PACKAGE_REPO = 'https://www.gitlink.org.cn/api/feynbin/scoop/archive/compose.zip'
 $SCOOP_MAIN_BUCKET_REPO = 'https://www.gitlink.org.cn/api/feynbin/scoop-compose/archive/master.zip'
 $SCOOP_PACKAGE_GIT_REPO = 'https://gitlink.org.cn/feynbin/Scoop.git'
 $SCOOP_MAIN_BUCKET_GIT_REPO = 'https://gitlink.org.cn/feynbin/scoop-compose.git'
